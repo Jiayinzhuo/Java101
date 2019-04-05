@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -8,6 +9,7 @@ import java.io.PrintStream;
 public class FileIO2 {
 	public static void main(String[] args) {
 		try {
+			System.out.println(new File(".").getAbsolutePath());
 			// use a normal input stream for bulk input
 			FileInputStream in = new FileInputStream(args[0]);
 			BufferedInputStream bin = new BufferedInputStream(in);
