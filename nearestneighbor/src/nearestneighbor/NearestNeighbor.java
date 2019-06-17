@@ -5,14 +5,14 @@ import java.util.Arrays;
 
 public class NearestNeighbor {
 	public Route findShortestRoute(ArrayList<City> cities) {
-		ArrayList<City> shortestRouteCities = new ArrayList<City>(cities.size());
 		System.out.println("-------------------------------------------------------------");
 		System.out.println("Initial Route	==> " + Arrays.toString(cities.toArray()));
 		System.out.println("w/ total distance: " + new Route(cities).calculateTotalDistance());
 		System.out.println("-------------------------------------------------------------");
+
 		// City city = cities.get((int) (cities.size() * Math.random()));
 		City city = cities.get((7));
-
+		ArrayList<City> shortestRouteCities = new ArrayList<City>(cities.size());
 		updateRoutes(shortestRouteCities, cities, city);
 		while (cities.size() >= 1) {
 			city = getNextCity(cities, city);
