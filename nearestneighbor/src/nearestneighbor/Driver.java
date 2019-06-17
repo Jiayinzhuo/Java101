@@ -11,7 +11,6 @@ public class Driver {
 					new City("Chicago", 41, -87), new City("New York", 40, -74), new City("Dallas", 32, -96)));
 
 	public static void main(String[] args) {
-		// Driver driver = new Driver();
 		ArrayList<City> cities = new ArrayList<City>();
 		cities.addAll(initialCities);
 		Route r = new NearestNeighbor().findShortestRoute(cities);
