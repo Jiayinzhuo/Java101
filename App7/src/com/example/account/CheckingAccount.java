@@ -1,3 +1,4 @@
+package com.example.account;
 
 public class CheckingAccount extends BankAccount {
 
@@ -7,20 +8,17 @@ public class CheckingAccount extends BankAccount {
 	// constructor
 	public CheckingAccount(double initialBalance) {
 		super(initialBalance);
-
 		accountNo = nextAccountNo++;
 	}
 
-	// AccountNo - return the current account ID
-	public int AccountNo() {
+	public int getAccountNo() {
 		return accountNo;
 	}
 
-	// Interest - don't accumulate interest if balance
-	// under $500
-	public void Interest() {
-		if (getBalance() > 500.0) {
-			super.Interest();
+	// don't accumulate interest if balance under $500
+	public void addInterest() {
+		if (getMonthlyBalance() > 500.0) {
+			super.addInterest();
 		}
 	}
 }
