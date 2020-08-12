@@ -15,6 +15,7 @@ public class SavingsAccount extends BankAccount {
 	}
 
 	// don't charge fee if balance over $200
+	@Override
 	public void deductFee() {
 		if (getMonthlyBalance() < 200.0) {
 			super.deductFee();
